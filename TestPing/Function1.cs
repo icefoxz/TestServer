@@ -19,8 +19,8 @@ namespace TestPing
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            var now = DateTimeOffset.Now;
-            string responseMessage =
+            var now = DateTimeOffset.UtcNow;
+            var responseMessage =
                 "你已经顺利连上服务器了！\n" +
                 $"当前服务器时间是：{now:F}\n" +
                 $"本地时间是:{now.ToLocalTime():F}";
